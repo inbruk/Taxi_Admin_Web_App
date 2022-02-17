@@ -1,0 +1,117 @@
+﻿.wlbMain_Container {
+    display:block;
+    float:left;
+    width: 1074px;
+    height: 591px;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.testNewsItem {
+    display: block;
+    float: left;
+    width: 1054px;
+    padding: 0px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 1px solid cyan;
+    margin: 10px;
+    overflow: hidden;
+    background-color: lightcyan;
+}
+
+.testNewsItem_Title {
+    display: block;
+    float: left;
+    width: 1054px;
+    height: 20px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    margin: 0px;
+    margin-top:5px;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: darkblue;
+}
+
+.testNewsItem_Body {
+    display: block;
+    float: left;
+    width: 1054px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    margin: 0px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: black;
+}
+
+.testNewsItem_AuthorAndDate {
+    display: block;
+    float: left;
+    width: 1054px;
+    height: 20px;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+.testNewsItem_AuthorCaption {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 20px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border: 0px;
+    margin: 0px;
+    color: darkblue;
+}
+
+.testNewsItem_Author {
+    display: block;
+    float: left;
+    width: 840px;
+    height: 20px;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    color: black;
+}
+
+.testNewsItem_DateCaption {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 20px;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px;
+    margin: 0px;
+    color: darkblue;
+}
+
+.testNewsItem_Date {
+    display: block;
+    float: left;
+    width: 80px;
+    height: 20px;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 10px;
+    border: 0px;
+    margin: 0px;
+    color: black;
+}

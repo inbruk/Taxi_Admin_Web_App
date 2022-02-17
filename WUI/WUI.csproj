@@ -1,0 +1,351 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35D3ACC5-D8A7-44C1-AFB5-60C0613CD360}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rapport.Support.WUI</RootNamespace>
+    <AssemblyName>Rapport.Support.WUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TelerikControlsUIforASPNETAjax\Telerik UI for ASP.NET AJAX R3 2017\Bin45\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Device.Detection, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TelerikControlsUIforASPNETAjax\Telerik UI for ASP.NET AJAX R3 2017\Bin45\Telerik.Web.Device.Detection.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TelerikControlsUIforASPNETAjax\Telerik UI for ASP.NET AJAX R3 2017\Bin45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TelerikControlsUIforASPNETAjax\Telerik UI for ASP.NET AJAX R3 2017\Bin45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuxiliaryWebUserControls\WindowLikeBorderPanel.ascx.cs">
+      <DependentUpon>WindowLikeBorderPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuxiliaryWebUserControls\WindowLikeBorderPanel.ascx.designer.cs">
+      <DependentUpon>WindowLikeBorderPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Companies.aspx.cs">
+      <DependentUpon>Companies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Companies.aspx.designer.cs">
+      <DependentUpon>Companies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyForm.aspx.cs">
+      <DependentUpon>CompanyForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanyForm.aspx.designer.cs">
+      <DependentUpon>CompanyForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverForm.aspx.cs">
+      <DependentUpon>DriverForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DriverForm.aspx.designer.cs">
+      <DependentUpon>DriverForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Drivers.aspx.cs">
+      <DependentUpon>Drivers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Drivers.aspx.designer.cs">
+      <DependentUpon>Drivers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceRecords.aspx.cs">
+      <DependentUpon>FinanceRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinanceRecords.aspx.designer.cs">
+      <DependentUpon>FinanceRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.Master.cs">
+      <DependentUpon>Global.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.Master.designer.cs">
+      <DependentUpon>Global.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShiftForm.aspx.cs">
+      <DependentUpon>ShiftForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShiftForm.aspx.designer.cs">
+      <DependentUpon>ShiftForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleForm.aspx.cs">
+      <DependentUpon>VehicleForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleForm.aspx.designer.cs">
+      <DependentUpon>VehicleForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicles.aspx.cs">
+      <DependentUpon>Vehicles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vehicles.aspx.designer.cs">
+      <DependentUpon>Vehicles.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadCaptcha\0.wav" />
+    <Content Include="App_Data\RadCaptcha\1.wav" />
+    <Content Include="App_Data\RadCaptcha\2.wav" />
+    <Content Include="App_Data\RadCaptcha\3.wav" />
+    <Content Include="App_Data\RadCaptcha\4.wav" />
+    <Content Include="App_Data\RadCaptcha\5.wav" />
+    <Content Include="App_Data\RadCaptcha\6.wav" />
+    <Content Include="App_Data\RadCaptcha\7.wav" />
+    <Content Include="App_Data\RadCaptcha\8.wav" />
+    <Content Include="App_Data\RadCaptcha\9.wav" />
+    <Content Include="App_Data\RadCaptcha\A.wav" />
+    <Content Include="App_Data\RadCaptcha\B.wav" />
+    <Content Include="App_Data\RadCaptcha\C.wav" />
+    <Content Include="App_Data\RadCaptcha\D.wav" />
+    <Content Include="App_Data\RadCaptcha\E.wav" />
+    <Content Include="App_Data\RadCaptcha\F.wav" />
+    <Content Include="App_Data\RadCaptcha\G.wav" />
+    <Content Include="App_Data\RadCaptcha\H.wav" />
+    <Content Include="App_Data\RadCaptcha\I.wav" />
+    <Content Include="App_Data\RadCaptcha\J.wav" />
+    <Content Include="App_Data\RadCaptcha\K.wav" />
+    <Content Include="App_Data\RadCaptcha\L.wav" />
+    <Content Include="App_Data\RadCaptcha\M.wav" />
+    <Content Include="App_Data\RadCaptcha\N.wav" />
+    <Content Include="App_Data\RadCaptcha\O.wav" />
+    <Content Include="App_Data\RadCaptcha\P.wav" />
+    <Content Include="App_Data\RadCaptcha\Q.wav" />
+    <Content Include="App_Data\RadCaptcha\R.wav" />
+    <Content Include="App_Data\RadCaptcha\S.wav" />
+    <Content Include="App_Data\RadCaptcha\T.wav" />
+    <Content Include="App_Data\RadCaptcha\U.wav" />
+    <Content Include="App_Data\RadCaptcha\V.wav" />
+    <Content Include="App_Data\RadCaptcha\W.wav" />
+    <Content Include="App_Data\RadCaptcha\X.wav" />
+    <Content Include="App_Data\RadCaptcha\Y.wav" />
+    <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Content Include="AuxiliaryWebUserControls\WindowLikeBorderPanel.ascx" />
+    <Content Include="Companies.aspx" />
+    <Content Include="CompanyForm.aspx" />
+    <Content Include="DriverForm.aspx" />
+    <Content Include="Drivers.aspx" />
+    <Content Include="FinanceRecords.aspx" />
+    <Content Include="Images\testNewsPicture.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Main.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\de-DE.tdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\en-US.tdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\fr-FR.tdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GlobalStyles.css" />
+    <Content Include="Images\AddRecord.png" />
+    <Content Include="Images\Borders.gif" />
+    <Content Include="Images\bottom.png" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\Edit.png" />
+    <Content Include="Images\header.png" />
+    <Content Include="Images\main-back.png" />
+    <Content Include="Images\no.gif" />
+    <Content Include="Images\no_img.png" />
+    <Content Include="Images\PurpleWebControls.png" />
+    <Content Include="Images\Refresh.png" />
+    <Content Include="Images\toolbar_background.png" />
+    <Content Include="Images\WebControls.gif" />
+    <Content Include="Images\yes.gif" />
+    <Content Include="MessageControls.css" />
+    <Content Include="ShiftForm.aspx" />
+    <Content Include="VehicleForm.aspx" />
+    <Content Include="Vehicles.aspx" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.Master" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BusinessWebUserControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AsyncHelper\AsyncHelper.csproj">
+      <Project>{8b5f090f-efb2-441a-a283-ccd031b1bf8c}</Project>
+      <Name>AsyncHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AuxiliaryTools\UseSessionInClassLib\AspNetStoragesInClassLib.csproj">
+      <Project>{3b5a3099-7393-4991-8e33-4cb503da6dff}</Project>
+      <Name>AspNetStoragesInClassLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AuxiliaryTools\WebApiTools\WebApiTools.csproj">
+      <Project>{571000ea-82a7-4361-8cf4-bd3ec1abaee2}</Project>
+      <Name>WebApiTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AuxiliaryTools\WUI\WUI.csproj">
+      <Project>{da14fb1d-42d6-4996-b821-d302dab2326d}</Project>
+      <Name>WUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessTools\AuthenticationEngine\AuthenticationEngine.csproj">
+      <Project>{c9762cee-7bac-475f-b67e-fd05429b71d3}</Project>
+      <Name>AuthenticationEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessTools\TokenEngine\TokenEngine.csproj">
+      <Project>{4d2f15e5-a291-47ab-b699-7b16f5e9f495}</Project>
+      <Name>TokenEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigurationEngine\ConfigurationEngine.csproj">
+      <Project>{f24f2b51-979b-4125-a695-8eddefc8ecb2}</Project>
+      <Name>ConfigurationEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DirectoryEngine\DirectoryEngine.csproj">
+      <Project>{cfaf6abf-d8c0-4028-8118-829954c65b89}</Project>
+      <Name>DirectoryEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericsAndTemplates\GenericsAndTemplates.csproj">
+      <Project>{d29a4ef6-3cc4-4f25-a7f3-e8883fc32d6d}</Project>
+      <Name>GenericsAndTemplates</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StringExtentions\StringExtentions.csproj">
+      <Project>{938903b4-bd74-4b71-a53e-fae190942f41}</Project>
+      <Name>StringExtentions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Support\WebApiClient\WebApiClient.csproj">
+      <Project>{d3f52dab-b081-4cef-896c-0b98a8cb4bca}</Project>
+      <Name>WebApiClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49573</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:16092/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

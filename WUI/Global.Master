@@ -1,0 +1,184 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="Global.Master.cs" Inherits="Rapport.Support.WUI.Global" %>
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%@ Register TagPrefix="auxctrls" TagName="WindowLikeBorderPanel" Src="~/AuxiliaryWebUserControls/WindowLikeBorderPanel.ascx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+	<title> <asp:ContentPlaceHolder ID="title" runat="server" /> </title>
+
+	<telerik:RadStyleSheetManager id="RadStyleSheetManager1" runat="server" />
+
+    <link href="GlobalStyles.css" rel="stylesheet" type="text/css" />
+    <link href="MessageControls.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <form id="mainForm" runat="server" >
+
+	    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+		    <Scripts>
+			    <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+			    <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+			    <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+		    </Scripts>
+	    </telerik:RadScriptManager>
+        <telerik:RadSkinManager ID="RadSkinManager1" runat="server" Skin="Office2010Silver" />
+        <telerik:RadFormDecorator ID="RadFormDecorator1" runat="server" 
+            DecoratedControls="All" EnableRoundedCorners="true" EnableTheming="true" />
+
+        <div class="bodyContainer" >
+            <div class="headerPart" >
+                <div class="rapportPanel">
+                    <div class="rapportDiv" >Rapport</div>
+                </div>
+                <div class="userPanel">
+                    <div class="userDiv" >
+                        <asp:Label ID="lblUserName" runat="server" Text="Павел Морозов" CssClass="labels"></asp:Label>
+                        <span>
+                            &#091;
+                        </span>
+                        <asp:Label ID="lblUserRole" runat="server" Text="Администратор" CssClass="labels"></asp:Label>
+                        <span>
+                            &#093;
+                        </span>
+                    </div>
+                </div>
+
+                <div class="leftHeaderPanel">
+                    <div class="supportPanel">
+                        Support&nbsp;&nbsp;
+                    </div>
+                    <div class="anchorsPanel">
+                        <asp:LinkButton runat="server" CssClass="headerAnchors" OnClick="lbSettings_Click" >Settings</asp:LinkButton>
+                        <span>
+                            |
+                        </span>
+                        <asp:LinkButton runat="server" CssClass="headerAnchors" OnClick="lbFeedback_Click">Feedback</asp:LinkButton>
+                        <span>
+                            |
+                        </span>
+                        <asp:LinkButton runat="server" CssClass="headerAnchors" OnClick="lbLogout_Click">Logout</asp:LinkButton>
+                        <span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="midBodyContainer">
+                <div class="leftPanel">
+
+                    <telerik:RadMenu ID="MainMenu" runat="server" EnableRoundedCorners="true" EnableShadows="true" Flow="Vertical" 
+                        Width="170px" Height="480px" EnableTheming="true" CssClass="mainMenu" OnItemClick="MainMenu_ItemClick"  >
+                       <Items>
+                            <telerik:RadMenuItem Text="Главная страница" NavigateUrl="Main.aspx" />
+
+                            <telerik:RadMenuItem Text="Водители" Value="mitDrivers" NavigateUrl="Drivers.aspx" >
+<%--                                <Items>
+                                    <telerik:RadMenuItem Text="Самозанятые" Value="mitDriversSelfEmployed" />
+                                    <telerik:RadMenuItem Text="Работники" Value="mitDriversEmployers" />
+                                    <telerik:RadMenuItem Text="Смена" Value="mitDriversShift" >
+                                        <Items>
+                                            <telerik:RadMenuItem Text="Активна" Value="mitDriversShiftActive" >
+                                                <Items>
+                                                    <telerik:RadMenuItem Text="Пауза" Value="mitDriversShiftActivePause" />
+                                                    <telerik:RadMenuItem Text="Работа" Value="mitDriversShiftActiveWork" />
+                                                    <telerik:RadMenuItem Text="Занят" Value="mitDriversShiftActiveBusy" />
+                                                </Items>
+                                            </telerik:RadMenuItem>
+                                        </Items>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem Text="Новые" Value="mitDriversNew" />
+                                    <telerik:RadMenuItem Text="Ожидают проверки" Value="mitDriversWaitForChecking" />
+                                    <telerik:RadMenuItem Text="Ожидают подтверждения" Value="mitDriversWaitForConfirmation" />
+                                    <telerik:RadMenuItem Text="Аккредитованные" Value="mitDriversAccredited" />
+                                    <telerik:RadMenuItem Text="Отклоненные" Value="mitDriversRejected" />
+                                    <telerik:RadMenuItem Text="Заблокированные" Value="mitDriversBanned" />
+                                </Items>--%>
+                            </telerik:RadMenuItem>
+
+                            <telerik:RadMenuItem Text="Автомобили"  Value="mitVehicles" NavigateUrl="Vehicles.aspx"/>
+                            <telerik:RadMenuItem Text="Компании" Value="mitCompamies" NavigateUrl="Companies.aspx"/>
+                            <telerik:RadMenuItem Text="Пассажиры" Value="mitPassangers" Enabled="false" />
+                            <telerik:RadMenuItem Text="Заказы" Value="mitOrders" Enabled="false"  />
+                            <telerik:RadMenuItem Text="Платежи" Value="mitPayments" Enabled="false"  />
+                            <telerik:RadMenuItem Text="Отзывы" Value="mitReviews" Enabled="false"  />
+                            <telerik:RadMenuItem Text="Сотрудники" Value="mitEmployers" Enabled="false"  />
+                            <telerik:RadMenuItem Text="Справочники" Value="mitDirectories" Enabled="false"  />
+                            <telerik:RadMenuItem Text="Система" Value="mitSystem" Enabled="false"  />
+                            <telerik:RadMenuItem Text="Журнал активности" Value="mitActivityLog" Enabled="false"  />
+                            <telerik:RadMenuItem Text="Отчеты" Value="mitReports" Enabled="false"  />
+
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                            <telerik:RadMenuItem Text=" " Enabled="false" />
+                      </Items>
+                    </telerik:RadMenu>
+
+                    <auxctrls:WindowLikeBorderPanel ID="wlbPanel" 
+                            Title="Очередь заявок" Width="180" Height="150" RefreshButtonEnabled="true" runat="server" >
+                        <Contents>
+                            <table class="tblRequestQueue">
+                                <tr class="tblRequestQueue_tr">
+                                    <td class="tblRequestQueue_tdl" >
+                                        Водители
+                                    </td>
+                                    <td class="tblRequestQueue_tdr" >
+                                        10
+                                    </td>
+                                </tr>
+                                <tr class="tblRequestQueue_tr">
+                                    <td class="tblRequestQueue_tdl" >
+                                        Автомобили
+                                    </td>
+                                    <td class="tblRequestQueue_tdr" >
+                                        18
+                                    </td>
+                                </tr>
+                                <tr class="tblRequestQueue_tr">
+                                    <td class="tblRequestQueue_tdl" >
+                                        Компании
+                                    </td>
+                                    <td class="tblRequestQueue_tdr" >
+                                        5
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tblRequestQueue_tdl" >
+                                        Отзывы
+                                    </td>
+                                    <td class="tblRequestQueue_tdr" >
+                                        44
+                                    </td>
+                                </tr>
+                            </table>
+                        </Contents>            
+                    </auxctrls:WindowLikeBorderPanel>
+
+                </div>
+                <div class="mainPanel">
+                    <asp:ContentPlaceHolder ID="main" runat="server" />
+                </div>
+            </div>
+            <div class="bottomPart">
+                &nbsp;
+            </div>
+        </div>
+    </form>
+</body>
+</html>

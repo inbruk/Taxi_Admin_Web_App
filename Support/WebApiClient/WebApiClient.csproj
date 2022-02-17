@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3F52DAB-B081-4CEF-896C-0B98A8CB4BCA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rapport.Support.WebApiClient</RootNamespace>
+    <AssemblyName>Rapport.Support.WebApiClient</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\CityView.cs" />
+    <Compile Include="DTO\CompanyView.cs" />
+    <Compile Include="DirectoryValues\CounterpartyForm.cs" />
+    <Compile Include="DTO\CounterpartyView.cs" />
+    <Compile Include="DTO\CountryView.cs" />
+    <Compile Include="DTO\FinanceView.cs" />
+    <Compile Include="DTO\LegalFormView.cs" />
+    <Compile Include="DTO\Location.cs" />
+    <Compile Include="DTO\ModelView.cs" />
+    <Compile Include="DTO\OrderCommentView.cs" />
+    <Compile Include="DTO\OrderView.cs" />
+    <Compile Include="DTO\Place.cs" />
+    <Compile Include="DirectoryValues\ProfileState.cs" />
+    <Compile Include="DTO\RecordView.cs" />
+    <Compile Include="DTO\RegionView.cs" />
+    <Compile Include="DTO\DriverView.cs" />
+    <Compile Include="DTO\ShiftOrderView.cs" />
+    <Compile Include="DTO\ShiftView.cs" />
+    <Compile Include="DTO\VehicleView.cs" />
+    <Compile Include="WebApiClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebApiClientBuilder.cs" />
+    <Compile Include="WebApiClientHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AsyncHelper\AsyncHelper.csproj">
+      <Project>{8b5f090f-efb2-441a-a283-ccd031b1bf8c}</Project>
+      <Name>AsyncHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AuxiliaryTools\WebApiTools\WebApiTools.csproj">
+      <Project>{571000ea-82a7-4361-8cf4-bd3ec1abaee2}</Project>
+      <Name>WebApiTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessTools\AuthenticationEngine\AuthenticationEngine.csproj">
+      <Project>{c9762cee-7bac-475f-b67e-fd05429b71d3}</Project>
+      <Name>AuthenticationEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ConfigurationEngine\ConfigurationEngine.csproj">
+      <Project>{f24f2b51-979b-4125-a695-8eddefc8ecb2}</Project>
+      <Name>ConfigurationEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DirectoryEngine\DirectoryEngine.csproj">
+      <Project>{cfaf6abf-d8c0-4028-8118-829954c65b89}</Project>
+      <Name>DirectoryEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RequestWithAuthHelper\WebApiRequestHelpers.csproj">
+      <Project>{db49c125-7572-4685-9c1e-edcc34a205b1}</Project>
+      <Name>WebApiRequestHelpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
